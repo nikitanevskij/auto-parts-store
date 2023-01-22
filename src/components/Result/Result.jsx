@@ -1,4 +1,3 @@
-import React from 'react';
 import './result.css';
 import { Table } from 'antd';
 
@@ -8,6 +7,7 @@ export const Result = ({ data, status }) => {
       title: '№',
       dataIndex: 'number',
       key: 'number',
+      render: (text, record, index) => index + 1,
     },
     {
       title: 'ID',
@@ -28,6 +28,7 @@ export const Result = ({ data, status }) => {
       title: 'БРЕНД',
       dataIndex: 'brand',
       key: 'brand',
+      render: (_, { brand }) => <>{brand.name}</>,
     },
     {
       title: 'ЦЕНА, RUB',
