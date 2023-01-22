@@ -15,7 +15,7 @@ export const App = () => {
   const [fetchResult, setFetchResult] = React.useState([]);
 
   React.useEffect(() => {
-    if (!articles.length || !articles[0].length) return;
+    if (!articles.length) return;
     async function fethParts() {
       try {
         setStatus('loading');
@@ -42,7 +42,7 @@ export const App = () => {
     <Layout className="layout">
       <Content className="content">
         <Search setArticles={setArticles} status={status} />
-        <Result data={fetchResult} />
+        <Result data={fetchResult} status={status} />
       </Content>
     </Layout>
   );
