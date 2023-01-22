@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 40px;
+  background: #f5f4f6;
+}

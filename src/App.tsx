@@ -1,8 +1,18 @@
 import React from 'react';
 import './App.css';
+import { Layout } from 'antd';
+import { Result } from './components/Result/Result';
+import { Search } from './components/Search/Search';
 
-function App() {
-  return <div></div>;
-}
+const { Content } = Layout;
 
-export default App;
+export const App: React.FC = () => {
+  return (
+    <Layout className="layout">
+      <Content className="content">
+        <Search />
+        <Result />
+      </Content>
+    </Layout>
+  );
+};
